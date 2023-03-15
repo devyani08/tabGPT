@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
           method: "POST",
           headers: {
               "Content-Type": "application/json",
-              "Authorization": "Bearer <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>"
+              "Authorization": "Bearer <API_KEY_REMOVED_FOR_SECURITY_REASONS>"
           },
           body: JSON.stringify({
               prompt: request.question,
