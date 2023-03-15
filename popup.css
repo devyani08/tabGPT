@@ -1,0 +1,35 @@
+/* Set the font family and size for the entire popup */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  /* Style for the title of the popup */
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Style for the answer */
+  #answer {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Style for the "Close" button */
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Style for the "Close" button when hovered over */
+  button:hover {
+    background-color: #2980b9;
+  }
+  
