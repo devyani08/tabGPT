@@ -1,4 +1,4 @@
-//background.js
+//popup.js
 
 //listen for message from content script
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
@@ -56,8 +56,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     });
   });
   
-  //popup.css
   
-  /* add your CSS styles here */
   
   
