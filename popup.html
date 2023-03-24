@@ -3,12 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Answer Popup</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="popup.css">
   </head>
   <body>
+    <h1>Ask a Question</h1>
+    <input type="text" id="question-input">
+    <button id="ask-button">Ask</button>
     <div id="answer-container">
       <h2 id="answer"></h2>
     </div>
     <script src="popup.js"></script>
+    <script>
+      document.getElementById("ask-button").addEventListener("click", function() {
+        var question = document.getElementById("question-input").value;
+        chrome.runtime.sendMessage({action: "getAnswer", question: question}, function(response) {
+          if (response && response.answer) {
+            //display answer in popup
+            document.getElementById("answer").textContent = response.answer;
+          } else {
+            //display error message in popup
+            document.getElementById("answer").textContent = "Sorry, an error occurred while fetching the answer.";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
